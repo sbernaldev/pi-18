@@ -1,3 +1,4 @@
 /vendor/
 /log/*
 !log/.gitkeep
+/src/config/Config.php
