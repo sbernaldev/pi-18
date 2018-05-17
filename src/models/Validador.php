@@ -24,27 +24,29 @@ class Validador
 
     public static function comprobarValidacion($array)
     {    
-        foreach ($cuerpo_respuesta['validacion'] as $key => $value) {
+        foreach ($array["validacion"] as $key => $value) {
             if ($value != 'valido') {
                 return false;
             }
         }
-        
+
         return true;
     }
 
     public static function estaDisponible($tipo, $valor) {
         switch ($tipo) {
             case 'correo':
-                // Falta decir que si el número de filas del resultado es = 0
-                if (Table::obtenerFila('usuario', 'correo', "$valor")) {
-                    return true;
+                if (Table::obtenerFila('usuario', 'correo', "$valor")->num_rows > 0) {
+                    return false;
                 }
-                return false;
+                return true;
                 break;
             
             case 'usuario':
-                
+                if (Table::obtenerFila('usuario', 'nom_usuario', "$valor")->num_rows > 0) {
+                    return false;
+                }
+                return true;
                 break;
             
             default:
