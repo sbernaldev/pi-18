@@ -1,0 +1,67 @@
+body{
+    background: #3CB8FF;
+}
+.navbar, .dropdown-menu{
+background:#3CB8FF;
+border: none;
+
+}
+
+.nav>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a, .dropdown-menu>li{
+  border-bottom: 3px solid transparent;
+}
+.nav>li>a:focus, .nav>li>a:hover,.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+  border-bottom: 3px solid transparent;
+  background: gray;
+}
+.navbar a, .dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .navbar-toggle{
+ color: rgb(255, 255, 255);
+}
+.dropdown-menu{
+      -webkit-box-shadow: none;
+    box-shadow:none;
+}
+
+.nav li:hover:nth-child(8n+1), .nav li.active:nth-child(8n+1){
+  border-bottom: #ffffff 3px solid;
+}
+.nav li:hover:nth-child(8n+2), .nav li.active:nth-child(8n+2){
+  border-bottom: #ffffff 3px solid;
+}
+.nav li:hover:nth-child(8n+3), .nav li.active:nth-child(8n+3){
+  border-bottom: #ffffff 3px solid;
+}
+.nav li:hover:nth-child(8n+4), .nav li.active:nth-child(8n+4){
+  border-bottom: #ffffff 3px solid;
+}
+.nav li:hover:nth-child(8n+5), .nav li.active:nth-child(8n+5){
+  border-bottom: #ffffff 3px solid;
+}
+.nav li:hover:nth-child(8n+6), .nav li.active:nth-child(8n+6){
+  border-bottom: #ffffff 3px solid;
+}
+.nav li:hover:nth-child(8n+7), .nav li.active:nth-child(8n+7){
+  border-bottom: #ffffff 3px solid;
+}
+.nav li:hover:nth-child(8n+8), .nav li.active:nth-child(8n+8){
+  border-bottom: #ffffff 3px solid;
+}
+
+.navbar-toggle .icon-bar{
+    color: #fff;
+    background: #fff;
+}
+
+.img-rounded {
+  position: relative; /*hace que muevas relativamente su posición*/
+  top: 10px; /*Pixeles arriba de su posición natural (puede ser negativo)*/
+  left: 10px; /*Pixeles a la izquierda de su posición natural*/
+  right: 10px; /*Pixeles a la derecha de su posición natural*/
+}
+
+.container {
+  position: relative; /*hace que muevas relativamente su posición*/
+  top: 30px; /*Pixeles arriba de su posición natural (puede ser negativo)*/
+  left: 10px; /*Pixeles a la izquierda de su posición natural*/
+  right: 10px; /*Pixeles a la derecha de su posición natural*/
+}
