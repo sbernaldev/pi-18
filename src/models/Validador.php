@@ -32,4 +32,24 @@ class Validador
         
         return true;
     }
+
+    public static function estaDisponible($tipo, $valor) {
+        switch ($tipo) {
+            case 'correo':
+                // Falta decir que si el número de filas del resultado es = 0
+                if (Table::obtenerFila('usuario', 'correo', "$valor")) {
+                    return true;
+                }
+                return false;
+                break;
+            
+            case 'usuario':
+                
+                break;
+            
+            default:
+                break;
+        }
+
+    }
 }
