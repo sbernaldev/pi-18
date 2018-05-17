@@ -21,4 +21,15 @@ class Validador
             return false;
         }
     }
+
+    public static function comprobarValidacion($array)
+    {    
+        foreach ($cuerpo_respuesta['validacion'] as $key => $value) {
+            if ($value != 'valido') {
+                return false;
+            }
+        }
+        
+        return true;
+    }
 }
