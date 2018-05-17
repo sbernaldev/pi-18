@@ -22,7 +22,7 @@ class Table extends Db
     $claves = "";
     $valores = "";
 
-    $longitud = sizeof($array);
+    $longitud = sizeof($array) - 1;
     $contador = 0;
     foreach ($array as $key => $value) {
       if ($contador < $longitud) {
@@ -54,9 +54,14 @@ class Table extends Db
 
   public static function obtenerFila($tabla, $clave, $valor)
   {    
-    $query = "SELECT * FROM $tabla WHERE $clave = $valor";
     $Table = new Table();
-    return $Table->connector->query($query);
+    if (is_string($valor)){
+      $valor = "'$valor'";
+    }
+      
+    $query = "SELECT * FROM `$tabla` WHERE `$clave` = $valor";
+    $resultado = $Table->connector->query($query);
+    return $resultado;
   }
 }
 
