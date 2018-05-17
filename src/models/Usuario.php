@@ -76,22 +76,17 @@ class Usuario extends Db
   {
     $array = [
       "correo" => $this->correo,
-      "nom_usuario" => $this->nick,
+      "nom_usuario" => $this->nom_usuario,
       "nombre" => $this->nombre,
       "apellido" => $this->apellido,
-      "contrasenya" => $this->password
+      "contrasenya" => $this->contrasenya
     ];
 
-    if ($this->validarUsuario($array)) {
-      if (Table::insertarFila("usuarios", $array)) {
-        return true;
-      } else {
-        return false;
-      }
+    if (Table::insertarFila("usuario", $array)) {
+      return true;
     } else {
       return false;
     }
-
   }
 
     /**
