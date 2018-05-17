@@ -52,6 +52,12 @@ class Table extends Db
 
   }
 
+  public static function obtenerFila($tabla, $clave, $valor)
+  {    
+    $query = "SELECT * FROM $tabla WHERE $clave = $valor";
+    $Table = new Table();
+    return $Table->connector->query($query);
+  }
 }
 
 ?>
