@@ -23,7 +23,7 @@
     <?php require "Menu.php"; ?>
 
     <main role="main" class="container">
-    <?php require "top-10/body.php"; ?>
+    <?php require "perfil/body.php"; ?>
     </main>
 
     <?php require "Archivosjs.php"; ?>
