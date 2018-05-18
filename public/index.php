@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="icon" href="images/favicon.ico">
 
     <title>QUOOTER</title>
@@ -19,12 +21,13 @@
 
   <body>
 
-    <?php require "../Menu.php"; ?>
+    <?php require "Menu.php"; ?>
 
     <main role="main" class="container">
-    <?php require "./body.php"; ?>
+    <?php require "top-10/body.php"; ?>
     </main>
 
-    <?php require "../Archivosjs.php"; ?>
+    <?php require "Archivosjs.php"; ?>
+    <?php require "footer.php"; ?>
   </body>
 </html>
