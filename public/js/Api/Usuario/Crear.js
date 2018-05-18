@@ -25,8 +25,12 @@ function peticion(req){
     }
 
     // Recojemos los parámetros del formulario
+    var correo = document.getElementById("correo").value;
+    var correoConfirmacion = document.getElementById("correoConfirmacion").value;
+    var nom_usuario = document.getElementById("nom_usuario").value;
     var nombre = document.getElementById("nombre").value;
-    var apellidos = document.getElementById("apellidos").value;
+    var apellido = document.getElementById("apellido").value;
+    var contrasenya = document.getElementById("contrasenya").value;
 
     // Inicio la peticion de escucha
     http_request.onreadystatechange = capturaPeticion();
@@ -36,8 +40,12 @@ function peticion(req){
     http_request.setRequestHeader("Content-type", "application/json");
     var req_body = [
         {
-            'nombre': nombre,
-            'apellidos': apellidos
+            'correo': correo,                            // string
+            'correoConfirmacion': correoConfirmacion,    // string
+            'nom_usuario': nom_usuario,                  // string
+            'nombre': nombre,                            // string
+            'apellido': apellido,                        // string
+            'contrasenya': contrasenya                  // string
         }
     ];
     // console.log(JSON.stringify(req_body));
@@ -46,23 +54,106 @@ function peticion(req){
     http_request.send(JSON.stringify(req_body));
 }
 
+// Manejar la respuesta que nos da la API
 function capturaPeticion() {
+    // Comprueba que se ha recibido la respuesta
+    if (http_request.readyState == 4) {
 
-    if (http_request.readyState == 4) { // 4 = DONE
-        // OK en la respuesta. Convertimos el JSON a un array
+        // Convertimos el JSON a un array
         var responseJSON=JSON.parse(http_request.responseText);
-        if (responseJSON["babfuibadsuofbd"] == "available"){
-            if (responseJSON["aksdasksdnias"] == "registered") {
-                alert("El usuario ha sido dado de alta correctamente.")
-                return true;
-            } else {
-                alert("Ha ocurrido un error. Revisa todos los campos, no pueden estar vacíos.");
-                return false;
+        
+        // Manejamos cada tipo de respuesta. Un if por cada validación
+        if (responseJSON["validacion"]["correo"] != "valido" ){
+            switch (responseJSON["validacion"]["correo"]) {
+                case "vacio":
+                    alert("El campo nombre está vacio");
+                    break;
+                case "invalido":
+                    alert("El campo nombre no es válido");
+                    break;
+                case "no_disponible":
+                    alert("El campo nombre no es válido");
+                    break;
+                default:
+                    break;
             }
-        } else {
-            alert("El correo electrónico está escogido, utiliza otro.");
-            return false;
         }
-    }
 
+        if (responseJSON["validacion"]["correoConfirmacion"] != "valido" ){
+            switch (responseJSON["validacion"]["correoConfirmacion"]) {
+                case "vacio":
+                    alert("El campo confirmar correo está vacio");
+                    break;
+                case "invalido":
+                    alert("El campo confirmar correo no es válido");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (responseJSON["validacion"]["nom_usuario"] != "valido" ){
+            switch (responseJSON["validacion"]["nom_usuario"]) {
+                case "vacio":
+                    alert("El campo nombre de usuario está vacio");
+                    break;
+                case "invalido":
+                    alert("El campo nombre de usuario no es válido");
+                    break;
+                case "no_disponible":
+                    alert("El campo nombre de usuario no está disponible");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (responseJSON["validacion"]["nombre"] != "valido" ){
+            switch (responseJSON["validacion"]["nombre"]) {
+                case "vacio":
+                    alert("El campo nombre está vacio");
+                    break;
+                case "invalido":
+                    alert("El campo nombre no es válido");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (responseJSON["validacion"]["apellido"] != "valido" ){
+            switch (responseJSON["validacion"]["apellido"]) {
+                case "vacio":
+                    alert("El campo apellido está vacio");
+                    break;
+                case "invalido":
+                    alert("El campo apellido no es válido");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (responseJSON["validacion"]["contrasenya"] != "valido" ){
+            switch (responseJSON["validacion"]["contrasenya"]) {
+                case "vacio":
+                    alert("El campo contraseña está vacio");
+                    break;
+                case "invalido":
+                    alert("El campo contraseña no es válido");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        // Si la request se ha completado satisfactoriamente aviso al usuario
+        if (responseJSON["registrado"] == true){
+            alert("El usuario ha sido dado de alta correctamente.")
+            return true;
+        }
+    } else {
+        alert("Ha ocurrido un error con la conexión.");
+        return false;
+    }
 }
