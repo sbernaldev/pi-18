@@ -35,3 +35,13 @@ blockquote{
   font-size: 19px;
   margin-top: -65px;
 }
+
+textarea {
+  width: 400px;
+  height: 300px;
+}
+
+p, span {
+  font-size: 14px;
+  color: grey;
+}
