@@ -19,13 +19,13 @@
 		<div class="container">
 			<div class="row main">
 				<div class="main-login main-center">
-					<form class="" method="post" action="#">
+					<form class="" method="post" action="index.php" onsubmit="return capturaPeticion()">
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Nombre de usuario</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="name" id="Username"  placeholder="Introduce un nombre de usuario"/>
+									<input type="text" class="form-control" name="nom_usuario" id="nom_usuario"  placeholder="Introduce un nombre de usuario"/>
 								</div>
 							</div>
                         </div>
@@ -34,7 +34,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="name" id="name"  placeholder="Introduce tu nombre"/>
+									<input type="text" class="form-control" name="nombre" id="nombre"  placeholder="Introduce tu nombre"/>
 								</div>
 							</div>
 						</div>
@@ -43,7 +43,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="name" id="name"  placeholder="Introduce tu apellido"/>
+									<input type="text" class="form-control" name="apellido" id="apellido"  placeholder="Introduce tu apellido"/>
 								</div>
 							</div>
 						</div>
@@ -52,7 +52,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Introduce tu Email"/>
+									<input type="text" class="form-control" name="correo" id="correo"  placeholder="Introduce tu Email"/>
 								</div>
 							</div>
 						</div>
@@ -61,7 +61,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Repite tu Email"/>
+									<input type="text" class="form-control" name="correoConfirmacion" id="correoConfirmacion"  placeholder="Repite tu Email"/>
 								</div>
 							</div>
 						</div>
@@ -70,7 +70,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Introduce tu contraseña"/>
+									<input type="password" class="form-control" name="contrasenya" id="contrasenya"  placeholder="Introduce tu contraseña"/>
 								</div>
 							</div>
 						</div>
@@ -84,7 +84,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<a href="" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Registrate</a>
+                            <button onclick="peticion()" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Registrate</button>
 						</div>
 						<div class="form-group">
 							<a href="login.php" target="_self" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Login</a>
@@ -93,5 +93,6 @@
 				</div>
 			</div>
 		</div>
+        <script src="js/Api/Usuario/Crear.js"></script>
 	</body>
 </html>

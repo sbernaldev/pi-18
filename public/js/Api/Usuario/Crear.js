@@ -61,7 +61,7 @@ function capturaPeticion() {
 
         // Convertimos el JSON a un array
         var responseJSON=JSON.parse(http_request.responseText);
-        
+        console.log(responseJSON);
         // Manejamos cada tipo de respuesta. Un if por cada validación
         if (responseJSON["validacion"]["correo"] != "valido" ){
             switch (responseJSON["validacion"]["correo"]) {
