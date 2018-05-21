@@ -35,21 +35,6 @@
               </div>
               </div>
               </ul></div>
-              <form class="container" id="form1" enctype="multipart/form-data" method="post" action="Upload.aspx">
-    <div class="row setup-content" id="step-1">
-        <div class="col-xs-12">
-            <div class="col-md-12 well text-center">
-      <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();"/>
-    </div>
-    <div id="fileName"></div>
-    <div id="fileSize"></div>
-    <div id="fileType"></div>
-    <div class="row">
-      <input type="button" onclick="uploadFile()" value="Upload"/>
-    </div>
-    <div id="progressNumber"></div>
-
-            </div>
         </div>
     </div>
   </form>
