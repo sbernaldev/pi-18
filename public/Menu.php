@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">
-        <img src="../images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        Quooter
+        <a href="index.php"><img src="images/logo.png" width="30" height="30" class="d-inline-block align-top mr-3" alt=""></a>Quooter
+
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,8 +28,9 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <button type="button" class="btn btn-primary"><a href="login.php">Entrar</a></button>
-            <button type="button" class="btn btn-primary ml-3"><a href="registro.php">Registro</a></button>
+          <a class="btn btn-primary" href="login.php" role="button">Entrar</a>
+          <a class="btn btn-primary ml-3" href="Registro.php" role"button">Registro</a>
+
         </form>
     </div>
 </nav>
