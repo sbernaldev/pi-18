@@ -2,16 +2,14 @@
 namespace Daw\models;
 use Daw\models\Db;
 use Daw\models\Validador;
-/**
- *
- */
+
 class Usuario extends Db
 {
   private $correo;
-  private $nick;
+  private $nom_usuario;
   private $nombre;
   private $apellido;
-  private $password;
+  private $contrasenya;
 
   function __construct()
   {
@@ -78,15 +76,17 @@ class Usuario extends Db
   {
     $array = [
       "correo" => $this->correo,
-      "nom_usuario" => $this->nick,
+      "nom_usuario" => $this->nom_usuario,
       "nombre" => $this->nombre,
       "apellido" => $this->apellido,
-      "contrasenya" => $this->password
+      "contrasenya" => $this->contrasenya
     ];
 
-    if ($this->validarUsuario($array))
-      Table::insertarFila("usuarios", $array);
-
+    if (Table::insertarFila("usuario", $array)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
     /**
@@ -114,25 +114,25 @@ class Usuario extends Db
     }
 
     /**
-     * Get the value of Nick
+     * Get the value of nom_usuario
      *
      * @return mixed
      */
-    public function getNick()
+    public function getNom_usuario()
     {
-        return $this->nick;
+        return $this->nom_usuario;
     }
 
     /**
-     * Set the value of Nick
+     * Set the value of nom_usuario
      *
-     * @param mixed nick
+     * @param mixed nom_usuario
      *
      * @return self
      */
-    public function setNick($nick)
+    public function setNom_usuario($nom_usuario)
     {
-        $this->nick = $nick;
+        $this->nom_usuario = $nom_usuario;
 
         return $this;
     }
@@ -186,52 +186,27 @@ class Usuario extends Db
     }
 
     /**
-     * Get the value of password
+     * Get the value of contrasenya
      *
      * @return mixed
      */
-    public function getPassword()
+    public function getContrasenya()
     {
-        return $this->password;
+        return $this->contrasenya;
     }
 
     /**
-     * Set the value of password
+     * Set the value of contrasenya
      *
-     * @param mixed password
+     * @param mixed contrasenya
      *
      * @return self
      */
-    public function setPassword($password)
+    public function setContrasenya($contrasenya)
     {
-        $this->password = $password;
+        $this->contrasenya = $contrasenya;
 
         return $this;
     }
-
-    /**
-     * Get the value of Avatar
-     *
-     * @return mixed
-     */
-    public function getAvatar()
-    {
-        return $this->avatar;
-    }
-
-    /**
-     * Set the value of Avatar
-     *
-     * @param mixed avatar
-     *
-     * @return self
-     */
-    public function setAvatar($avatar)
-    {
-        $this->avatar = $avatar;
-
-        return $this;
-    }
-
 }
 ?>
