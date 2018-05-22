@@ -79,7 +79,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Repite tu contraseña"/>
+									<input type="password" class="form-control" name="repiteContrasenya" id="repiteContrasenya"  placeholder="Repite tu contraseña"/>
 								</div>
 							</div>
 						</div>

@@ -14,6 +14,7 @@ $nom_usuario = $json_decoded["nom_usuario"];
 $nombre = $json_decoded["nombre"];
 $apellido = $json_decoded["apellido"];
 $contrasenya = $json_decoded["contrasenya"];
+$repiteContrasenya = $json_decoded["repiteContrasenya"];
 
 // Los metemos en el array para trabajar después mejor con foreach
 $parametros_entrada = [
@@ -22,7 +23,8 @@ $parametros_entrada = [
     'nom_usuario' => $nom_usuario,                  // string
     'nombre' => $nombre,                            // string
     'apellido' => $apellido,                        // string
-    'contrasenya' => $contrasenya,                  // string
+    'contrasenya' => $contrasenya,                 // string
+    'repiteContrasenya' => $repiteContrasenya
 ];
 
 // Inicializo lo que enviará al final la API como respuesta a la petición
@@ -33,7 +35,8 @@ $cuerpo_respuesta = [
         'nom_usuario' => '',            // string:  + no_disponible
         'nombre' => '',
         'apellido' => '',
-        'contrasenya' => ''
+        'contrasenya' => '',
+        'repiteContrasenya' => ''
     ],
     'registrado' => ''                  // boolean:  true, false
 ];
@@ -92,10 +95,21 @@ foreach ($parametros_entrada as $key => $value) {
             break;
 
         case 'contrasenya':
+            $contrasenya = $value;
             if (Validador::esBlanco($value)){
                 $cuerpo_respuesta["validacion"]["contrasenya"] = "vacio";
             } else {
                 $cuerpo_respuesta["validacion"]["contrasenya"] = "valido";
+            }
+            break;
+
+        case 'repiteContrasenya':
+            if (Validador::esBlanco($value)){
+                $cuerpo_respuesta["validacion"]["repiteContrasenya"] = "vacio";
+            } elseif (!Validador::esIdentico($value, $contrasenya)) {
+                $cuerpo_respuesta["validacion"]["repiteContrasenya"] = "invalido";
+            } else {
+                $cuerpo_respuesta["validacion"]["repiteContrasenya"] = "valido";
             }
             break;
 

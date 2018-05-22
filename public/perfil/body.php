@@ -22,15 +22,11 @@
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Nombre</strong></span>Alejandro</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Apellido</strong></span>Artes</li>
               <li class="list-group-item text-right"><span class="pull-left"><strong class="">Rol</strong></span>Administrador
-               
                       </li>
             </ul></div><br>
       
           </div><div class="col-9">
         <div class="row">
-            
-            
-            
             <ul class="column my-1">
             <div class="row">
             <h1>Escribe cosas sobre ti!</h1>
@@ -39,6 +35,8 @@
               </div>
               </div>
               </ul></div>
-            
+        </div>
+    </div>
+  </form>
     </div></div>
     </div>
