@@ -1,12 +1,9 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
     <a class="navbar-brand" href="#">
-<<<<<<< HEAD
-     <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top mr-3" alt=""></a>Quooter
-=======
-        <a href="index.php"><img src="images/logo.png" width="30" height="30" class="d-inline-block align-top mr-3" alt=""></a>Quooter
 
+        <a href="index.php"><img src="images/logo.png" width="30" height="30" class="d-inline-block align-top mr-3" alt=""></a><p class="text-primary m-3">Quooter</p>
     </a>
->>>>>>> 34f9d1c1d8ee9d4be71f293972cede3a434e43dc
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -37,7 +34,6 @@
         <form class="form-inline my-2 my-lg-0">
           <a class="btn btn-primary" href="../login.php" role="button">Entrar</a>
           <a class="btn btn-primary ml-3" href="../Registro.php" role"button">Registro</a>
-
         </form>
     </div>
 </nav>
