@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
     <a class="navbar-brand" href="#">
 
         <a href="index.php"><img src="images/logo.png" width="30" height="30" class="d-inline-block align-top mr-3" alt=""></a><p class="text-primary m-3">Quooter</p>
@@ -34,7 +34,6 @@
         <form class="form-inline my-2 my-lg-0">
           <a class="btn btn-primary" href="../login.php" role="button">Entrar</a>
           <a class="btn btn-primary ml-3" href="../Registro.php" role"button">Registro</a>
-
         </form>
     </div>
 </nav>
