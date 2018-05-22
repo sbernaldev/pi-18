@@ -31,6 +31,7 @@ function peticion(req){
     var nombre = document.getElementById("nombre").value;
     var apellido = document.getElementById("apellido").value;
     var contrasenya = document.getElementById("contrasenya").value;
+    var repiteContrasenya = document.getElementById("repiteContrasenya").value;
 
     // Inicio la peticion de escucha
     http_request.onreadystatechange = capturaPeticion();
@@ -45,7 +46,8 @@ function peticion(req){
             'nom_usuario': nom_usuario,                  // string
             'nombre': nombre,                            // string
             'apellido': apellido,                        // string
-            'contrasenya': contrasenya                  // string
+            'contrasenya': contrasenya,                  // string
+            'repiteContrasenya': repiteContrasenya      // string
         }
     ];
     // console.log(JSON.stringify(req_body));
@@ -141,6 +143,19 @@ function capturaPeticion() {
                     break;
                 case "invalido":
                     alert("El campo contraseña no es válido");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (responseJSON["validacion"]["repiteContrasenya"] != "valido" ){
+            switch (responseJSON["validacion"]["repiteContrasenya"]) {
+                case "vacio":
+                    alert("El campo repite contraseña está vacio");
+                    break;
+                case "invalido":
+                    alert("El campo repite contraseña no es válido");
                     break;
                 default:
                     break;
