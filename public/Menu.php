@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">
-        <a href="index.php"><img src="public/images/logo.png" width="30" height="30" class="d-inline-block align-top mr-3" alt=""></a>Quooter
+        <a href="index.php"><img src="images/logo.png" width="30" height="30" class="d-inline-block align-top mr-3" alt=""></a>Quooter
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
