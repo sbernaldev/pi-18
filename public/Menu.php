@@ -1,22 +1,20 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">
-        <a href="index.php"><img src="public/images/logo.png" width="30" height="30" class="d-inline-block align-top mr-3" alt=""></a>Quooter
-
-    </a>
+     <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top mr-3" alt=""></a>Quooter
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="../index.php">Inicio</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Favoritos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Top 10</a>
+                <a class="nav-link" href="#">Top 10</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="contacto/index.php">Contacto</a>
