@@ -95,6 +95,7 @@ foreach ($parametros_entrada as $key => $value) {
             break;
 
         case 'contrasenya':
+            $contrasenya = $value;
             if (Validador::esBlanco($value)){
                 $cuerpo_respuesta["validacion"]["contrasenya"] = "vacio";
             } else {
@@ -105,6 +106,8 @@ foreach ($parametros_entrada as $key => $value) {
         case 'repiteContrasenya':
             if (Validador::esBlanco($value)){
                 $cuerpo_respuesta["validacion"]["repiteContrasenya"] = "vacio";
+            } elseif (!Validador::esIdentico($value, $contrasenya)) {
+                $cuerpo_respuesta["validacion"]["repiteContrasenya"] = "invalido";
             } else {
                 $cuerpo_respuesta["validacion"]["repiteContrasenya"] = "valido";
             }
