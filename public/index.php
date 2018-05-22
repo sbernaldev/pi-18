@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="linkscss.php">
 
     <title>QUOOTER</title>
 
@@ -26,7 +27,7 @@
     <?php require "body_index.php"; ?>
     </main>
 
-    <?php require "Archivosjs.php"; ?>
     <?php require "footer.php"; ?>
+    <?php require "Archivosjs.php"; ?>
   </body>
 </html>
