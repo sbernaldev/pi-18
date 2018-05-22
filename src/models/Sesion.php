@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Javi
- * Date: 22/05/2018
- * Time: 10:00
- */
+
 
 namespace Daw\models;
 
