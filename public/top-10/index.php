@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>QUOOTER</title>
+    <title>TOP 10</title>
 
     <!-- Bootstrap core CSS -->
     <?php require "../linkscss.php"; ?>
