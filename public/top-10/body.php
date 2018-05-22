@@ -1,4 +1,5 @@
-<body background="/fondos/fondo_cielo.jpg">
+<div class="fondo">
+
 <br>
 <br>
 <br>
@@ -29,7 +30,7 @@
         <?php require "caja_citas.php"; ?>
     </div>
     <div class="col-sm">
-        <?php require "caja_citas.php"; ?>
+          <?php require "caja_citas.php"; ?>
     </div>
     <div class="col-sm">
         <?php require "caja_citas.php"; ?>
@@ -65,5 +66,5 @@
         <?php require "caja_citas.php"; ?>
     </div>
 </div>
-
+</div>
 <!---- ---->
