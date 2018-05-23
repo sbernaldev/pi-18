@@ -13,7 +13,7 @@
                 <a class="nav-link" href="/">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Favoritos</a>
+                <a class="nav-link" href="#">Publicar cita</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Top 10</a>
@@ -21,18 +21,20 @@
             <li class="nav-item">
                 <a class="nav-link" href="/contacto">Contacto</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi Perfil</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">something else here</a>
-                    <a class="dropdown-item" href="#">something else here</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <a class="btn btn-primary" href="/login.php" role="button">Entrar</a>
-          <a class="btn btn-primary ml-3" href="/registro.php" role"button">Registro</a>
+            <a class="btn btn-primary" href="/login.php" role="button">Entrar</a>
+            <a class="btn btn-primary ml-3" href="/registro.php" role"button">Registro</a>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle ml-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Mi cuenta
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#">Ajustes</a>
+                    <a class="dropdown-item" href="#">Favoritos</a>
+                    <a class="dropdown-item" href="#">Cerrar sesión</a>
+                </div>
+            </div>
         </form>
     </div>
 </nav>
