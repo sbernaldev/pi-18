@@ -3,6 +3,9 @@
 
 namespace Daw\models;
 
+use Daw\models\Table;
+use mysqli;
+
 
 class Sesion
 {
@@ -30,4 +33,9 @@ class Sesion
         session_destroy();
     }
 
+    public static function load($nom_usuario)
+    {
+        $datosdelusuario = Table::obtenerFila("usuario", "nom_usuario", "$nom_usuario");
+        $_SESSION["user_data"] = mysqli_fetch_assoc($datosdelusuario);
+    }
 }
