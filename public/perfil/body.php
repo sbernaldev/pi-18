@@ -33,6 +33,9 @@
             <div class="form-group col-md-10 mt-3">
                 <textarea class="form-control input-sm " type="textarea" id="message" placeholder="Escribe cosas sobre ti..." maxlength="300" rows="10"></textarea>
             </div>
+            <div class="form-group col-md-4">
+            <button class="form-control input-sm btn btn-success disabled" id="btnSubmit" name="btnSubmit" type="button" style="height:35px">GUARDAR</button>
+            </div>
               </div>
               </ul></div>
         </div>
