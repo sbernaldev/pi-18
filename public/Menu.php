@@ -23,7 +23,7 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <a class="btn btn-primary" href="/login.php" role="button">Entrar</a>
+            <a class="btn btn-primary" href="/login.php" role="button">Login</a>
             <a class="btn btn-primary ml-3" href="/registro.php" role"button">Registro</a>
             <div class="btn-group" role="group">
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle ml-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
