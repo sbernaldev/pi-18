@@ -1,3 +1,9 @@
+<div class="col-sm text-center font-weight-bold " style="font-family:sans-serif">
+    <br>
+        <H1>Publica tus propias citas</H1>
+        <h1>Puntua, añadelas a tus favoritos, busca...</h1>
+    <br>
+</div>
 
 <div class="container mt-4">
   <div class="row">
@@ -119,3 +125,5 @@
       </div>
   </div>
 </div>
+<br>
+<br>
