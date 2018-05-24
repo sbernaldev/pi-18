@@ -71,7 +71,7 @@
                     <a  href="" class="fa fa-thumbs-o-up" style="font-size:14px;color:blue;text-decoration:none"></a></p> 
                 <!-- AQUÍ DEBAJO IRÁN LA CANTIDAD DE DISSLIKES DE LA CITA -->
                 <span class="badge badge-light">dislikes
-<               <a href="" class="fa fa-thumbs-o-down" style="font-size:14px;color:red;text-decoration:none"></a></span>
+               <a href="" class="fa fa-thumbs-o-down" style="font-size:14px;color:red;text-decoration:none"></a></span>
             </div>
         </div>
     </div>
@@ -129,7 +129,7 @@
                     <a  href="" class="fa fa-thumbs-o-up" style="font-size:14px;color:blue;text-decoration:none"></a></p> 
                 <!-- AQUÍ DEBAJO IRÁN LA CANTIDAD DE DISSLIKES DE LA CITA -->
                 <span class="badge badge-light">dislikes
-<               <a href="" class="fa fa-thumbs-o-down" style="font-size:14px;color:red;text-decoration:none"></a></span>
+               <a href="" class="fa fa-thumbs-o-down" style="font-size:14px;color:red;text-decoration:none"></a></span>
             </div>
         </div>
     </div>
@@ -186,7 +186,7 @@
                     <a  href="" class="fa fa-thumbs-o-up" style="font-size:14px;color:blue;text-decoration:none"></a></p> 
                 <!-- AQUÍ DEBAJO IRÁN LA CANTIDAD DE DISSLIKES DE LA CITA -->
                 <span class="badge badge-light">dislikes
-<               <a href="" class="fa fa-thumbs-o-down" style="font-size:14px;color:red;text-decoration:none"></a></span>
+               <a href="" class="fa fa-thumbs-o-down" style="font-size:14px;color:red;text-decoration:none"></a></span>
             </div>
         </div>
     </div>
