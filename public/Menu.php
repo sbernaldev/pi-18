@@ -30,9 +30,10 @@
                 Mi cuenta
                 </button>
                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="/perfil">Mi perfil</a>
                     <a class="dropdown-item" href="#">Ajustes</a>
                     <a class="dropdown-item" href="#">Favoritos</a>
-                    <a class="dropdown-item" href="#">Cerrar sesión</a>
+                    <a class="dropdown-item" href="login.php">Cerrar sesión</a>
                 </div>
             </div>
         </form>
