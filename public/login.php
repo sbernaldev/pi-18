@@ -21,15 +21,15 @@
 			<div class="row main">
 				<div class="main-login main-center">
 					<form class="" method="post" action="#">
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Email</label>
+					<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Nombre de usuario</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Introduce tu Email"/>
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="nom_usuario" id="nom_usuario"  placeholder="Introduce un nombre de usuario"/>
 								</div>
 							</div>
-						</div>
+                        </div>
 						<div class="form-group">
 							<label for="password" class="cols-sm-2 control-label">Contraseña</label>
 							<div class="cols-sm-10">
