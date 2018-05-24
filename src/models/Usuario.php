@@ -2,6 +2,8 @@
 namespace Daw\models;
 use Daw\models\Db;
 use Daw\models\Validador;
+use mysqli;
+use Daw\models\Sesion;
 
 class Usuario extends Db
 {
@@ -70,6 +72,24 @@ class Usuario extends Db
       return true;
     }
 
+  }
+
+  public function login($usuario, $contrasenya)
+  {
+    $usuario = $this->nom_usuario;
+    $contrasenya = $this->contrasenya;
+
+    $Db= new Db;
+
+    $sql = "SELECT * FROM quooter  WHERE nom_usuario = '$usuario' AND contrasenya = $contrasenya";
+    $resultado = $Db->query($sql);
+
+    if (mysqli_num_rows($resultado) > 0) {
+          Sesion::start();
+          Sesion::set('nombre', $usuario);
+          } else {
+        header("Location: login.php")
+    }
   }
 
   public function crearUsuario()
