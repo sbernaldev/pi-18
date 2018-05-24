@@ -1,4 +1,4 @@
-<div class="container m-2">
+<div class="container m-2 mt-5">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3 bg-light border border-primary">
 			<form class="" action="" method="post">
@@ -35,7 +35,7 @@
      	</form>
 		</div>
 		<div class="col md-6">
-      
+
 		</div>
 	</div>
 </div>
