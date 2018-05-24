@@ -1,4 +1,11 @@
+.footer-margin{
+  min-height: 58px;
+}
 .footer-bottom {
+    width: 100%;
+    bottom: 0pt;
+    left: 0pt;
+    position:fixed;
     padding: 20px 0 10px;
     border-top: 1px solid #666;
     background: #1e1e1e;

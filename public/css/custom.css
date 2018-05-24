@@ -1,7 +1,12 @@
 blockquote{
   border-left:none
 }
-
+.container{
+  height:auto !important;
+  height:100%;
+  min-height:100%;
+  position:relative;
+}
 .quote-badge{
   background-color: rgba(0, 0, 0, 0.2);
 }

@@ -12,8 +12,8 @@
         <!-- Bootstrap core CSS -->
         <?php require "linkscss.php";?>
         <!-- Custom styles for this template -->
-        <link rel="stylesheet" href="css/custom.css">
-        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="./css/custom.css">
+        <link rel="stylesheet" href="./css/footer.css">
     </head>
     <body>
         <?php require "Menu.php"; ?>
