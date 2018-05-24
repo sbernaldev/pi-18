@@ -7,107 +7,109 @@ use Daw\models\Sesion;
 
 class Usuario extends Db
 {
-  private $correo;
-  private $nom_usuario;
-  private $nombre;
-  private $apellido;
-  private $contrasenya;
+    private $correo;
+    private $nom_usuario;
+    private $nombre;
+    private $apellido;
+    private $contrasenya;
 
-  function __construct()
-  {
+    function __construct()
+    {
 
-  }
-
-  public function validarUsuario($array)
-  {
-    $resultado_final = [];
-    $correo = "";
-
-
-    foreach ($array as $key => $value) {
-      switch ($key) {
-        case 'correo':
-          $correo = $value;
-          if (Validador::esBlanco($value)){
-            $resultado_final[] = "El campo correo está vacio";
-          }
-          break;
-        case 'correoConfirmacion':
-          if (Validador::esBlanco($value)){
-            $resultado_final[] = "El campo vuelve a insertar correo está vacio";
-          } elseif (!Validador::esIdentico($value, $correo)) {
-            $resultado_final[] = "Los campos correo no coinciden";
-          }
-          break;
-        case 'nom_usuario':
-          if (Validador::esBlanco($value)){
-            $resultado_final[] = "El campo nombre de usuario está vacio";
-          }
-          break;
-        case 'nombre':
-          if (Validador::esBlanco($value)){
-            $resultado_final[] = "El campo nombre está vacio";
-          }
-          break;
-        case 'apellido':
-          if (Validador::esBlanco($value)){
-            $resultado_final[] = "El campo apellido está vacio";
-          }
-          break;
-        case 'contrasenya':
-          if (Validador::esBlanco($value)){
-            $resultado_final[] = "El campo contraseña está vacío";
-          }
-          break;
-
-        default:
-          // code...
-          break;
-      }
     }
 
-    if (!empty($resultado_final)) {
-      return $resultado_final;
-    } else {
-      return true;
+    public function validarUsuario($array)
+    {
+        $resultado_final = [];
+        $correo = "";
+
+        foreach ($array as $key => $value) {
+            switch ($key) {
+                case 'correo':
+                    $correo = $value;
+                    if (Validador::esBlanco($value)){
+                        $resultado_final[] = "El campo correo está vacio";
+                    }
+                    break;
+
+                case 'correoConfirmacion':
+                    if (Validador::esBlanco($value)){
+                        $resultado_final[] = "El campo vuelve a insertar correo está vacio";
+                    } elseif (!Validador::esIdentico($value, $correo)) {
+                        $resultado_final[] = "Los campos correo no coinciden";
+                    }
+                    break;
+
+                case 'nom_usuario':
+                    if (Validador::esBlanco($value)){
+                        $resultado_final[] = "El campo nombre de usuario está vacio";
+                    }
+                    break;
+
+                case 'nombre':
+                    if (Validador::esBlanco($value)){
+                        $resultado_final[] = "El campo nombre está vacio";
+                    }
+                    break;
+
+                case 'apellido':
+                    if (Validador::esBlanco($value)){
+                        $resultado_final[] = "El campo apellido está vacio";
+                    }
+                    break;
+
+                case 'contrasenya':
+                    if (Validador::esBlanco($value)){
+                        $resultado_final[] = "El campo contraseña está vacío";
+                    }
+                    break;
+
+                default:
+                // code...
+                break;
+            }
+        }
+
+        if (!empty($resultado_final)) {
+            return $resultado_final;
+        } else {
+            return true;
+        }
+
     }
 
-  }
+    public function login()
+    {
+        $nom_usuario = $this->nom_usuario;
+        $contrasenya = $this->contrasenya;
 
-  public function login($usuario, $contrasenya)
-  {
-    $usuario = $this->nom_usuario;
-    $contrasenya = $this->contrasenya;
-
-    $Db= new Db;
-
-    $sql = "SELECT * FROM quooter  WHERE nom_usuario = '$usuario' AND contrasenya = $contrasenya";
-    $resultado = $Db->query($sql);
-
-    if (mysqli_num_rows($resultado) > 0) {
-          Sesion::start();
-          Sesion::set('nombre', $usuario);
-          } else {
-        header("Location: login.php")
+        $Db = new Db;
+        $resultado = Table::obtenerFila("usuario","nom_usuario", "$nom_usuario");
+        if (mysqli_num_rows($resultado) > 0) {
+            Sesion::start();
+            Sesion::load($this->nom_usuario);
+            return true;
+        } else {
+            return false;
+        }
     }
-  }
 
-  public function crearUsuario()
-  {
-    $array = [
-      "correo" => $this->correo,
-      "nom_usuario" => $this->nom_usuario,
-      "nombre" => $this->nombre,
-      "apellido" => $this->apellido,
-      "contrasenya" => $this->contrasenya
-    ];
+    public function crearUsuario()
+    {
+        $array = [
+            "correo" => $this->correo,
+            "nom_usuario" => $this->nom_usuario,
+            "nombre" => $this->nombre,
+            "apellido" => $this->apellido,
+            "contrasenya" => $this->contrasenya
+        ];
 
-    if (Table::insertarFila("usuario", $array)) {
-      return true;
-    } else {
-      return false;
+        if (Table::insertarFila("usuario", $array)) {
+            return true;
+        } else {
+            return false;
+        }
     }
-  }
 
     /**
      * Get the value of Correo
