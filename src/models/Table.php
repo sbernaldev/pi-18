@@ -52,7 +52,10 @@ class Table extends Db
 
   }
 
-  public static function obtenerFila($tabla, $clave, $valor)
+  /**
+   * Obtengo todas las columnas de una o varias filas
+   */
+  public static function obtenerFila(string $tabla, string $clave, $valor)
   {    
     $Table = new Table();
     if (is_string($valor)){

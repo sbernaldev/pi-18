@@ -3,6 +3,7 @@ require_once __DIR__ . "/../../../vendor/autoload.php";
 
 use Daw\models\Usuario;
 use Daw\models\Validador;
+use Daw\models\Sesion;
 
 // Aquí recojo la petición post que tiene un JSON
 $json_decoded = json_decode(file_get_contents('php://input'), true);
@@ -36,8 +37,6 @@ foreach ($parametros_entrada as $key => $value) {
         case 'nom_usuario':
             if (Validador::esBlanco($value)){
                 $cuerpo_respuesta["validacion"]["nom_usuario"] = "vacio";
-            } elseif (!Validador::estaDisponible('usuario', $value)) {
-                $cuerpo_respuesta["validacion"]["nom_usuario"] = "no_disponible";
             } else {
                 $cuerpo_respuesta["validacion"]["nom_usuario"] = "valido";
             }
@@ -60,12 +59,12 @@ foreach ($parametros_entrada as $key => $value) {
 // Todos los campos han de ser válidos para procesar finalmente la petición
 if (Validador::comprobarValidacion($cuerpo_respuesta)) {
     $usuario = new Usuario;
-    $nombre = $usuario->setNom_usuario("$nom_usuario");
+    $usuario->setNom_usuario("$nom_usuario");
     $contrasenya_hashed = password_hash("$contrasenya", PASSWORD_DEFAULT);
-    $contrasenya = $usuario->setContrasenya("$contrasenya_hashed");
+    $usuario->setContrasenya("$contrasenya_hashed");
 
     // Una vez en el objeto los datos necesarios, ejecuto el método final y arrojo el resultado
-    if ($usuario->login($nombre,$contrasenya)){
+    if ($usuario->login()){
         $cuerpo_respuesta["logeado"] = true;
     } else {
         $cuerpo_respuesta["logeado"] = false;
