@@ -13,7 +13,7 @@
                 <a class="nav-link" href="/">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Publicar cita</a>
+                <a class="nav-link" href="/publicar">Publicar cita</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/top-10">Top 10</a>
