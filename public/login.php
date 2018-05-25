@@ -45,6 +45,9 @@
 						<div class="form-group">
 							<a href="registro.php" target="_self" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Registrate!</a>
 						</div>
+            <div class="form-group">
+							<a href="index.php" target="_self" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Entra como invitado!</a>
+						</div>
 					</form>
 				</div>
 			</div>
