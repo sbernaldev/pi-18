@@ -20,16 +20,17 @@
 		<div class="container">
 			<div class="row main">
 				<div class="main-login main-center">
-					<form class="" method="post" action="#">
+					<form class="" method="post" action="conexion_AD.php">
 					<div class="form-group">
+                            <h1 class="display-4">Active directory</h1>
 							<label for="name" class="cols-sm-2 control-label">Nombre de usuario</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="nom_usuario" id="nom_usuario"  placeholder="Introduce un nombre de usuario"/>
+									<input type="text" class="form-control" name="nom_usuario" id="nom_usuario"  placeholder="Introduce un nombre de usuario  de active directory"/>
 								</div>
 							</div>
-          </div>
+                        </div>
 						<div class="form-group">
 							<label for="password" class="cols-sm-2 control-label">Contraseña</label>
 							<div class="cols-sm-10">
@@ -40,13 +41,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<a href="" target="_self" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Iniciar sesion</a>
-						</div>
-						<div class="form-group">
-							<a href="registro.php" target="_self" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Registrate!</a>
-						</div>
-            <div class="form-group">
-							<a href="index.php" target="_self" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Entra como invitado!</a>
+							<input type="submit" id="button" value="Login" class="btn btn-primary btn-lg btn-block login-button"></input>
 						</div>
 					</form>
 				</div>

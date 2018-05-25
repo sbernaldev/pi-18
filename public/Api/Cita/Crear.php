@@ -1,0 +1,88 @@
+<?php
+require_once __DIR__ . "/../../../vendor/autoload.php";
+
+use Daw\models\Usuario;
+use Daw\models\Cita;
+use Daw\models\Validador;
+
+// Aquí recojo la petición post que tiene un JSON
+$json_decoded = json_decode(file_get_contents('php://input'), true);
+
+// Cojo los datos del JSON y me los guardo
+$frase = $json_decoded["frase"];
+$id_usuario = $json_decoded["id_usuario"];
+$id_categoria = $json_decoded["id_categoria"];
+
+
+// Los metemos en el array para trabajar después mejor con foreach
+$parametros_entrada = [
+    'frase' => $correo,                 // string
+    'id_usuario' => $id_usuario,        // int
+    'id_categoria' => $id_categoria     // int
+];
+
+// Inicializo lo que enviará al final la API como respuesta a la petición
+$cuerpo_respuesta = [
+    'validacion' => [                   // string:  vacio, valido, invalido
+        'frase' => '',
+        'id_usuario' => '',
+        'id_categoria' => ''
+    ],
+    'creada' => ''                      // boolean:  true, false
+];
+
+// Hacemos las validaciones que deseemos para cada parámetro de entrada
+foreach ($parametros_entrada as $key => $value) {
+    switch ($key) {
+        case 'frase':
+            if (Validador::esBlanco($value)) {
+                $cuerpo_respuesta["validacion"]["frase"] = "vacio";
+            } else {
+                    $cuerpo_respuesta["validacion"]["frase"] = "valido";
+            }
+            break;
+        
+        case 'id_usuario':
+            if (Validador::esBlanco($value)) {
+                $cuerpo_respuesta["validacion"]["id_usuario"] = "vacio";
+            } else {
+                $cuerpo_respuesta["validacion"]["id_usuario"] = "valido";
+            }
+            break;
+        
+        case 'id_categoria':
+            if (Validador::esBlanco($value)){
+                $cuerpo_respuesta["validacion"]["id_categoria"] = "vacio";
+            } else {
+                $cuerpo_respuesta["validacion"]["id_categoria"] = "valido";
+            }
+            break;
+
+        default:
+            break;
+    }
+}
+
+// Todos los campos han de ser válidos para procesar finalmente la petición
+if (Validador::comprobarValidacion($cuerpo_respuesta)) {
+    $cita = new Cita;
+    $cita->setFrase("$frase");
+    $cita->setId_usuario($id_usuario);
+    $cita->setId_categoria($id_categoria);
+
+    // Una vez en el objeto los datos necesarios, ejecuto el método final y arrojo el resultado
+    if ($usuario->crearCita()) {
+        $cuerpo_respuesta["registrado"] = true;
+    } else {
+        $cuerpo_respuesta["registrado"] = false;
+    }
+} else {
+    // Si no ha pasado la validación, digo que no se ha completado
+    $cuerpo_respuesta["registrado"] = false;
+}
+
+// Mostramos por pantalla la respuesta de la petición en JSON
+$cuerpo_respuestaJSON = json_encode($cuerpo_respuesta);
+echo $cuerpo_respuestaJSON;
+
+?>
