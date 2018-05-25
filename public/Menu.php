@@ -22,7 +22,7 @@
                 <a class="nav-link" href="/contacto">Contacto</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-2 my-lg-0 mr-3">
             <a class="btn btn-primary" href="/login.php" role="button">Login</a>
             <a class="btn btn-primary ml-3" href="/registro.php" role"button">Registro</a>
             <div class="btn-group" role="group">
