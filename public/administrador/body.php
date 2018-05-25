@@ -3,7 +3,7 @@
 
 
         <div class="col-md-12">
-        <h4>FAVORITOS</h4>
+        <h4>ADMINISTRADOR</h4>
         <div class="table-responsive">
 
 
