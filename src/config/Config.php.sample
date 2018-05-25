@@ -4,11 +4,11 @@ namespace Daw\config;
 
 class Config
 {
-    public const DB_HOST = "52.15.121.243";
-    public const DB_PORT = "3306";
-    public const DB_USERNAME = "javi";
-    public const DB_PASSWD = "holamundo";
-    public const DB_DB = "quooter";
+    public const DB_HOST = "";
+    public const DB_PORT = "";
+    public const DB_USERNAME = "";
+    public const DB_PASSWD = "";
+    public const DB_DB = "";
 }
 
 ?>
