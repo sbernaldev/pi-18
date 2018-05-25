@@ -33,7 +33,7 @@
                     <a class="dropdown-item" href="/perfil">Mi perfil</a>
                     <a class="dropdown-item" href="#">Ajustes</a>
                     <a class="dropdown-item" href="#">Favoritos</a>
-                    <a class="dropdown-item" href="/administrador">Gestión de ususarios</a>
+                    <a class="dropdown-item" href="/administrador">Gestión usuarios</a>
                     <a class="dropdown-item" href="login.php">Cerrar sesión</a>
                 </div>
             </div>
