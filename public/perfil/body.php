@@ -36,9 +36,6 @@
             <div class="form-group col-md-4">
             <button class="form-control input-sm btn btn-success disabled" id="btnSubmit" name="btnSubmit" type="button" style="height:35px">GUARDAR</button>
             </div>
-            <div class="form-group col-md-4">
-            <button class="form-control input-sm btn btn-success disabled" id="btnSubmit" name="btnSubmit" type="button" style="height:35px" href="../administrador">Gestión de usuarios</button>
-            </div>
               </div>
               </ul></div>
         </div>
