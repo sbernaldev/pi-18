@@ -11,6 +11,7 @@ class Cita extends Db
     public $fecha_publicacion;
     public $frase;
     public $id_usuario;
+    public $id_categoria;
 
     function __construct()
     {
@@ -80,121 +81,101 @@ class Cita extends Db
     }
 
     /**
-     * Get the value of Correo
-     *
-     * @return mixed
-     */
-    public function getCorreo()
+     * Get the value of id_frase
+     */ 
+    public function getId_frase()
     {
-        return $this->correo;
+        return $this->id_frase;
     }
 
     /**
-     * Set the value of Correo
+     * Set the value of id_frase
      *
-     * @param mixed correo
-     *
-     * @return self
-     */
-    public function setCorreo($correo)
+     * @return  self
+     */ 
+    public function setId_frase($id_frase)
     {
-        $this->correo = $correo;
+        $this->id_frase = $id_frase;
 
         return $this;
     }
 
     /**
-     * Get the value of nom_usuario
-     *
-     * @return mixed
-     */
-    public function getNom_usuario()
+     * Get the value of fecha_publicacion
+     */ 
+    public function getFecha_publicacion()
     {
-        return $this->nom_usuario;
+        return $this->fecha_publicacion;
     }
 
     /**
-     * Set the value of nom_usuario
+     * Set the value of fecha_publicacion
      *
-     * @param mixed nom_usuario
-     *
-     * @return self
-     */
-    public function setNom_usuario($nom_usuario)
+     * @return  self
+     */ 
+    public function setFecha_publicacion($fecha_publicacion)
     {
-        $this->nom_usuario = $nom_usuario;
+        $this->fecha_publicacion = $fecha_publicacion;
 
         return $this;
     }
 
     /**
-     * Get the value of Nombre
-     *
-     * @return mixed
-     */
-    public function getNombre()
+     * Get the value of frase
+     */ 
+    public function getFrase()
     {
-        return $this->nombre;
+        return $this->frase;
     }
 
     /**
-     * Set the value of Nombre
+     * Set the value of frase
      *
-     * @param mixed nombre
-     *
-     * @return self
-     */
-    public function setNombre($nombre)
+     * @return  self
+     */ 
+    public function setFrase($frase)
     {
-        $this->nombre = $nombre;
+        $this->frase = $frase;
 
         return $this;
     }
 
     /**
-     * Get the value of Apellido
-     *
-     * @return mixed
-     */
-    public function getApellido()
+     * Get the value of id_usuario
+     */ 
+    public function getId_usuario()
     {
-        return $this->apellido;
+        return $this->id_usuario;
     }
 
     /**
-     * Set the value of Apellido
+     * Set the value of id_usuario
      *
-     * @param mixed apellido
-     *
-     * @return self
-     */
-    public function setApellido($apellido)
+     * @return  self
+     */ 
+    public function setId_usuario($id_usuario)
     {
-        $this->apellido = $apellido;
+        $this->id_usuario = $id_usuario;
 
         return $this;
     }
 
     /**
-     * Get the value of contrasenya
-     *
-     * @return mixed
-     */
-    public function getContrasenya()
+     * Get the value of id_categoria
+     */ 
+    public function getId_categoria()
     {
-        return $this->contrasenya;
+        return $this->id_categoria;
     }
 
     /**
-     * Set the value of contrasenya
+     * Set the value of id_categoria
      *
-     * @param mixed contrasenya
-     *
-     * @return self
-     */
-    public function setContrasenya($contrasenya)
+     * @return  self
+     */ 
+    public function setId_categoria($id_categoria)
     {
-        $this->contrasenya = $contrasenya;
+        $this->id_categoria = $id_categoria;
 
         return $this;
     }
