@@ -3,9 +3,9 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
+    <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/registro.css">
@@ -29,7 +29,7 @@
 									<input type="text" class="form-control" name="nom_usuario" id="nom_usuario"  placeholder="Introduce un nombre de usuario"/>
 								</div>
 							</div>
-                        </div>
+          </div>
 						<div class="form-group">
 							<label for="password" class="cols-sm-2 control-label">Contraseña</label>
 							<div class="cols-sm-10">
@@ -40,7 +40,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<a href="" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Iniciar sesion</a>
+							<a href="" target="_self" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Iniciar sesion</a>
 						</div>
 						<div class="form-group">
 							<a href="registro.php" target="_self" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Registrate!</a>
