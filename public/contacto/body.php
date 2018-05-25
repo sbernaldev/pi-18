@@ -35,7 +35,10 @@
      	</form>
 		</div>
 		<div class="col md-6">
-
+			<ul class="list-group bg-light">
+  <li class="list-group-item  border-primary bg-light">Nuestra ubicación</li>
+  <li class="list-group-item  border-primary bg-light"><iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3082.907152245148!2d-0.4146626849888473!3d39.403606579495786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604e82a8672a35%3A0xed578f5f80fed685!2sFlorida+Universitaria!5e0!3m2!1ses!2ses!4v1527236475997" width="300" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></li>
+</ul>
 		</div>
 	</div>
 </div>
