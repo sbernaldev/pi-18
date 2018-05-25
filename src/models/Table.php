@@ -66,6 +66,17 @@ class Table extends Db
     $resultado = $Table->connector->query($query);
     return $resultado;
   }
+
+    /**
+     * Obtengo todas las filas de una tabla
+     */
+    public static function selectAllFrom(string $table)
+    {
+        $Table = new Table();
+        $query = "SELECT * FROM `$table`";
+        $resultado = $Table->connector->query($query);
+        return $resultado;
+    }
 }
 
 ?>

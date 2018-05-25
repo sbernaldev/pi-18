@@ -3,7 +3,6 @@ namespace Daw\models;
 use Daw\models\Db;
 use Daw\models\Validador;
 use mysqli;
-use Daw\models\Sesion;
 
 class Cita extends Db
 {
