@@ -13,8 +13,9 @@
 		<title>Registro</title>
 	</head>
 	<body>
+    <br>
 		<div align="center">
-			<img src="images/logo.png"/>
+            <img  width="177" height="177" src="images/logo_marco.png"/>
 		</div>
 		<div class="container">
 			<div class="row main">

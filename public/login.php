@@ -14,8 +14,11 @@
 		<title>LOGIN</title>
 	</head>
 	<body>
-		<div align="center">
-			<img src="images/logo.png"/>
+    <br>
+		<div align= "center">
+
+			<img  width="177" height="177" src="images/logo_marco.png"/>
+
 		</div>
 		<div class="container">
 			<div class="row main">
