@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
     <a class="navbar-brand" href="#">
-        <a href="index.php"><img src="/images/logo.png" width="30" height="30" class="d-inline-block align-top mr-3" alt=""></a><p class="text-primary m-3">Quooter</p>
+        <a href="index.php"><img src="/images/logo_marco.png" width="30" height="30" class="d-inline-block align-top mr-3" alt=""></a><p class="text-primary m-3">Quooter</p>
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
                 <a class="nav-link" href="/contacto">Contacto</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-2 my-lg-0 mr-3">
             <a class="btn btn-primary" href="/login.php" role="button">Login</a>
             <a class="btn btn-primary ml-3" href="/registro.php" role"button">Registro</a>
             <div class="btn-group" role="group">
@@ -32,7 +32,8 @@
                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                     <a class="dropdown-item" href="/perfil">Mi perfil</a>
                     <a class="dropdown-item" href="#">Ajustes</a>
-                    <a class="dropdown-item" href="/favoritos">Favoritos</a>
+                    <a class="dropdown-item" href="#">Favoritos</a>
+                    <a class="dropdown-item" href="/administrador">Gestión usuarios</a>
                     <a class="dropdown-item" href="login.php">Cerrar sesión</a>
                 </div>
             </div>

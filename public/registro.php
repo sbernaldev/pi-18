@@ -3,7 +3,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
+    <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -13,8 +13,9 @@
 		<title>Registro</title>
 	</head>
 	<body>
+    <br>
 		<div align="center">
-			<img src="images/logo.png"/>
+            <img  width="177" height="177" src="images/logo_marco.png"/>
 		</div>
 		<div class="container">
 			<div class="row main">
@@ -88,6 +89,9 @@
 						</div>
 						<div class="form-group">
 							<a href="login.php" target="_self" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Login</a>
+						</div>
+            <div class="form-group">
+							<a href="index.php" target="_self" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Entra como invitado!</a>
 						</div>
 					</form>
 				</div>

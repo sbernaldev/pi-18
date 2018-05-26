@@ -1,5 +1,3 @@
-<?php require_once __DIR__ . "/../../vendor/autoload.php"; ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="../css/custom.css">
     <link rel="icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="body.js">
-    <link rel="stylesheet" href="body.css">
-    <title>PUBLICAR</title>
+    <title>FAVORITOS</title>
 
     <!-- Bootstrap core CSS -->
     <?php require "../linkscss.php"; ?>
