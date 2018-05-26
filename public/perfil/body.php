@@ -47,7 +47,38 @@
                         </div>
                     </div>
                 </ul>
-            </div>
+                </div>
         </div>
+
     </div>
+    <h1 text align="center">Mis Favoritos</h1>
+
+    <table id="example" class="display main-center" style="width:100%">
+        <thead class="text-center">
+        <th style="height: auto">NOMBRE</th>
+        <th >CITA</th>
+        <th >CATEGORÍA</th>
+        <th >PUBLICADO</th>
+
+        </thead>
+        <tbody>
+        <?php
+        // aquí hay que configurar el foreach, este es el de otro proyecto
+        $seleccion = $consulta->getUsuarios();
+        foreach ($seleccion as $fila) {
+
+            echo "<tr>"."<td style='height: auto'>"
+                .$fila['nom_usuario']."</td>"."<td style='height: auto'>"
+                .$fila['frase']."</td>"."<td style='height: auto'>"
+                .$fila['nom_clase']."</td>"."<td style='height: auto'>"
+                .$fila['fecha_publicacion']."</td>"."<td style='height: auto'>"
+                ."</tr>";
+        }
+
+        ?>
+        </tbody>
+    </table>
 </div>
+
+
+
