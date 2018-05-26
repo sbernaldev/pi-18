@@ -13,7 +13,7 @@ if (isset($_GET["cantidad"])) {
 }
 
 if (isset($_GET["ordenar_por"])) {
-    $ordenar_por = $_GET["cantidad"];
+    $ordenar_por = $_GET["ordenar_por"];
 } else {
     $ordenar_por = "fecha";
 }
