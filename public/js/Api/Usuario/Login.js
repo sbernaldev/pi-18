@@ -38,7 +38,7 @@ function peticion(){
     var req_body = [
         {
             'nom_usuario': nom_usuario,                  // string
-            'contrasenya': contrasenya,                  // string
+            'contrasenya': contrasenya                  // string
         }
     ]
     // console.log(JSON.stringify(req_body))
@@ -67,9 +67,6 @@ function capturaPeticion() {
                     case "invalido":
                         alert("El campo nombre de usuario no es válido")
                         break
-                    case "no_disponible":
-                        alert("El campo nombre de usuario no está disponible")
-                        break
                     default:
                         break
                 }
@@ -87,7 +84,9 @@ function capturaPeticion() {
                         break
                 }
             }
-
+            if (responseJSON["logeado"] == true ){
+                window.location.replace("/perfil");
+            }
         } else {
             alert("Ha ocurrido un error con la conexión.")
             return false

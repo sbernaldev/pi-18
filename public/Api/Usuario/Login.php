@@ -9,8 +9,8 @@ use Daw\models\Sesion;
 $json_decoded = json_decode(file_get_contents('php://input'), true);
 
 // Cojo los datos del JSON y me los guardo
-$nom_usuario = $json_decoded["nom_usuario"];
-$contrasenya = $json_decoded["contrasenya"];
+$nom_usuario = $json_decoded[0]["nom_usuario"];
+$contrasenya = $json_decoded[0]["contrasenya"];
 
 
 // Los metemos en el array para trabajar después mejor con foreach
