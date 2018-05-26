@@ -35,7 +35,7 @@ function peticion(){
 
     // Inicio la peticion de escucha
     http_request.onreadystatechange = capturaPeticion
-    http_request.open('POST', "http://192.168.99.100:32917/Api/Usuario/Crear.php", false)
+    http_request.open('POST', "/Api/Usuario/Crear.php", false)
         
     // Construyo el JSON de la petición
     http_request.setRequestHeader("Content-type", "application/json")
@@ -54,7 +54,6 @@ function peticion(){
 
     // Enviamos los datos de la petición
     http_request.send(JSON.stringify(req_body))
-    return false
 }
 
 // Manejar la respuesta que nos da la API
@@ -168,7 +167,7 @@ function capturaPeticion() {
             // Si la request se ha completado satisfactoriamente aviso al usuario
             if (responseJSON["registrado"] == true){
                 alert("El usuario ha sido dado de alta correctamente.")
-                window.location.replace("http://stackoverflow.com");
+                window.location.replace("/login");
             } else {
                 alert("El usuario no ha podido darse de alta correctamente.")
                 return false

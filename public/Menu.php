@@ -23,8 +23,8 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0 mr-3">
-            <a class="btn btn-primary" href="/login.php" role="button">Login</a>
-            <a class="btn btn-primary ml-3" href="/registro.php" role"button">Registro</a>
+            <a class="btn btn-primary" href="/login" role="button">Login</a>
+            <a class="btn btn-primary ml-3" href="/registro" role"button">Registro</a>
             <div class="btn-group" role="group">
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle ml-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Mi cuenta
@@ -34,7 +34,7 @@
                     <a class="dropdown-item" href="#">Ajustes</a>
                     <a class="dropdown-item" href="#">Favoritos</a>
                     <a class="dropdown-item" href="/administrador">Gestión usuarios</a>
-                    <a class="dropdown-item" href="login.php">Cerrar sesión</a>
+                    <a class="dropdown-item" href="/logout">Cerrar sesión</a>
                 </div>
             </div>
         </form>
