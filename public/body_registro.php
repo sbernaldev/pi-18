@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row main justify-content-md-center pt-3">
-			<form class="col-sm-12 col-md-6" method="post" action="/" onsubmit="return peticion();">
+			<form class="col-sm-12 col-md-6">
 				<div class="form-group">
 					<label for="inlineFormInputGroup">Nombre de usuario</label>
 					<div class="input-group mb-2">
@@ -65,7 +65,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<input type="button" onclick="peticion();" class="btn btn-primary btn-lg btn-block login-button" value="Registrate" />
+					<input type="button" onclick="peticion()" class="btn btn-primary btn-lg btn-block login-button" value="Registrate" />
 				</div>
 				<div class="form-group">
 					<a href="login.php" target="_self" type="button" class="btn btn-primary btn-lg btn-block login-button">Login</a>

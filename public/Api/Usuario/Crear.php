@@ -4,14 +4,17 @@ require_once __DIR__ . "/../../../vendor/autoload.php";
 use Daw\models\Usuario;
 use Daw\models\Validador;
 
+// Aquí recojo la petición post que tiene un JSON
+$json_decoded = json_decode(file_get_contents('php://input'), true);
+
 // Cojo los datos del POST y me los guardo
-$correo = isset($_POST["correo"]) ? $_POST["correo"] : "";
-$correoConfirmacion = isset($_POST["correoConfirmacion"]) ? $_POST["correoConfirmacion"] : "";
-$nom_usuario = isset($_POST["nom_usuario"]) ? $_POST["nom_usuario"] : "";
-$nombre = isset($_POST["nombre"]) ? $_POST["nombre"] : "";
-$apellido = isset($_POST["apellido"]) ? $_POST["apellido"] : "";
-$contrasenya = isset($_POST["contrasenya"]) ? $_POST["contrasenya"] : "";
-$repiteContrasenya = isset($_POST["repiteContrasenya"]) ? $_POST["repiteContrasenya"] : "";
+$correo = $json_decoded[0]["correo"];
+$correoConfirmacion = $json_decoded[0]["correoConfirmacion"];
+$nom_usuario = $json_decoded[0]["nom_usuario"];
+$nombre = $json_decoded[0]["nombre"];
+$apellido = $json_decoded[0]["apellido"];
+$contrasenya = $json_decoded[0]["contrasenya"];
+$repiteContrasenya = $json_decoded[0]["repiteContrasenya"];
 
 // Los metemos en el array para trabajar después mejor con foreach
 $parametros_entrada = [

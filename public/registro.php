@@ -21,7 +21,7 @@
 		<?php require "body_registro.php"; ?>
         
 		<!-- Optional JavaScript -->
-		<script src="js/Api/Usuario/Crear.js"></script>
+		<script type="text/javascript" src="/js/Api/Usuario/Crear.js"></script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<?php require "Archivosjs.php"; ?>
 	</body>
