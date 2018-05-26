@@ -4,17 +4,14 @@ require_once __DIR__ . "/../../../vendor/autoload.php";
 use Daw\models\Usuario;
 use Daw\models\Validador;
 
-// Aquí recojo la petición post que tiene un JSON
-$json_decoded = json_decode(file_get_contents('php://input'), true);
-
-// Cojo los datos del JSON y me los guardo
-$correo = $json_decoded["correo"];
-$correoConfirmacion = $json_decoded["correoConfirmacion"];
-$nom_usuario = $json_decoded["nom_usuario"];
-$nombre = $json_decoded["nombre"];
-$apellido = $json_decoded["apellido"];
-$contrasenya = $json_decoded["contrasenya"];
-$repiteContrasenya = $json_decoded["repiteContrasenya"];
+// Cojo los datos del POST y me los guardo
+$correo = $_POST["correo"];
+$correoConfirmacion = $_POST["correoConfirmacion"];
+$nom_usuario = $_POST["nom_usuario"];
+$nombre = $_POST["nombre"];
+$apellido = $_POST["apellido"];
+$contrasenya = $_POST["contrasenya"];
+$repiteContrasenya = $_POST["repiteContrasenya"];
 
 // Los metemos en el array para trabajar después mejor con foreach
 $parametros_entrada = [

@@ -48,8 +48,11 @@ class Table extends Db
 
     $query = "INSERT INTO $tabla ($claves) VALUES ($valores)";
     $Table = new Table();
-    $Table->connector->query($query);
-
+    if ($Table->connector->query($query)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   /**
