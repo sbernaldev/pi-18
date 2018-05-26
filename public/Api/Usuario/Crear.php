@@ -7,14 +7,14 @@ use Daw\models\Validador;
 // Aquí recojo la petición post que tiene un JSON
 $json_decoded = json_decode(file_get_contents('php://input'), true);
 
-// Cojo los datos del JSON y me los guardo
-$correo = $json_decoded["correo"];
-$correoConfirmacion = $json_decoded["correoConfirmacion"];
-$nom_usuario = $json_decoded["nom_usuario"];
-$nombre = $json_decoded["nombre"];
-$apellido = $json_decoded["apellido"];
-$contrasenya = $json_decoded["contrasenya"];
-$repiteContrasenya = $json_decoded["repiteContrasenya"];
+// Cojo los datos del POST y me los guardo
+$correo = $json_decoded[0]["correo"];
+$correoConfirmacion = $json_decoded[0]["correoConfirmacion"];
+$nom_usuario = $json_decoded[0]["nom_usuario"];
+$nombre = $json_decoded[0]["nombre"];
+$apellido = $json_decoded[0]["apellido"];
+$contrasenya = $json_decoded[0]["contrasenya"];
+$repiteContrasenya = $json_decoded[0]["repiteContrasenya"];
 
 // Los metemos en el array para trabajar después mejor con foreach
 $parametros_entrada = [

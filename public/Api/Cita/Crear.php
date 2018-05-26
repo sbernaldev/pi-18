@@ -9,16 +9,16 @@ use Daw\models\Validador;
 $json_decoded = json_decode(file_get_contents('php://input'), true);
 
 // Cojo los datos del JSON y me los guardo
-$frase = $json_decoded["frase"];
-$id_usuario = $json_decoded["id_usuario"];
-$id_categoria = $json_decoded["id_categoria"];
+$frase = $json_decoded[0]["frase"];
+$id_usuario = $json_decoded[0]["id_usuario"];
+$id_clase = $json_decoded[0]["id_clase"];
 
 
 // Los metemos en el array para trabajar después mejor con foreach
 $parametros_entrada = [
-    'frase' => $correo,                 // string
+    'frase' => $frase,                 // string
     'id_usuario' => $id_usuario,        // int
-    'id_categoria' => $id_categoria     // int
+    'id_clase' => $id_clase     // int
 ];
 
 // Inicializo lo que enviará al final la API como respuesta a la petición
@@ -26,7 +26,7 @@ $cuerpo_respuesta = [
     'validacion' => [                   // string:  vacio, valido, invalido
         'frase' => '',
         'id_usuario' => '',
-        'id_categoria' => ''
+        'id_clase' => ''
     ],
     'creada' => ''                      // boolean:  true, false
 ];
@@ -50,11 +50,11 @@ foreach ($parametros_entrada as $key => $value) {
             }
             break;
         
-        case 'id_categoria':
+        case 'id_clase':
             if (Validador::esBlanco($value)){
-                $cuerpo_respuesta["validacion"]["id_categoria"] = "vacio";
+                $cuerpo_respuesta["validacion"]["id_clase"] = "vacio";
             } else {
-                $cuerpo_respuesta["validacion"]["id_categoria"] = "valido";
+                $cuerpo_respuesta["validacion"]["id_clase"] = "valido";
             }
             break;
 
@@ -68,10 +68,10 @@ if (Validador::comprobarValidacion($cuerpo_respuesta)) {
     $cita = new Cita;
     $cita->setFrase("$frase");
     $cita->setId_usuario($id_usuario);
-    $cita->setId_categoria($id_categoria);
+    $cita->setid_clase($id_clase);
 
     // Una vez en el objeto los datos necesarios, ejecuto el método final y arrojo el resultado
-    if ($usuario->crearCita()) {
+    if ($cita->crearCita()) {
         $cuerpo_respuesta["registrado"] = true;
     } else {
         $cuerpo_respuesta["registrado"] = false;
