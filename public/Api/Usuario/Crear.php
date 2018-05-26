@@ -5,13 +5,13 @@ use Daw\models\Usuario;
 use Daw\models\Validador;
 
 // Cojo los datos del POST y me los guardo
-$correo = $_POST["correo"];
-$correoConfirmacion = $_POST["correoConfirmacion"];
-$nom_usuario = $_POST["nom_usuario"];
-$nombre = $_POST["nombre"];
-$apellido = $_POST["apellido"];
-$contrasenya = $_POST["contrasenya"];
-$repiteContrasenya = $_POST["repiteContrasenya"];
+$correo = isset($_POST["correo"]) ? $_POST["correo"] : "";
+$correoConfirmacion = isset($_POST["correoConfirmacion"]) ? $_POST["correoConfirmacion"] : "";
+$nom_usuario = isset($_POST["nom_usuario"]) ? $_POST["nom_usuario"] : "";
+$nombre = isset($_POST["nombre"]) ? $_POST["nombre"] : "";
+$apellido = isset($_POST["apellido"]) ? $_POST["apellido"] : "";
+$contrasenya = isset($_POST["contrasenya"]) ? $_POST["contrasenya"] : "";
+$repiteContrasenya = isset($_POST["repiteContrasenya"]) ? $_POST["repiteContrasenya"] : "";
 
 // Los metemos en el array para trabajar después mejor con foreach
 $parametros_entrada = [
