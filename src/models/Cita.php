@@ -92,7 +92,37 @@ class Cita extends Db
             return false;
         }
     }
+    /**
+     * Obten con o sin límite una cntidad de citas con un determinado orden
+     */
+    public static function getCitas(array $params)
+    {
+        /*$params = [
+            "cantidad" => $cantidad,
+            "ordenar_por" => $ordenar_por
+        ];*/
+        
+        $resultado = mysqli_fetch_all(Table::selectAllFrom("frase"));
 
+        if (isset($params["cantidad"])) {
+            $resultado_limitado = array_slice($resultado,0,$params["cantidad"]);
+            
+            /* switch ($params["ordenar_por"]) {
+                case 'fecha':
+                    # descendiente de fecha
+                    break;
+                case 'likes':
+                    # descendiente de likes
+                    break;
+                default:
+                    # sin efecto
+                    break;
+            }*/
+            return $resultado_limitado;
+        }
+
+        return $resultado;
+    }
     /**
      * Get the value of id_frase
      */ 
