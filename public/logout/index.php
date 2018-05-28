@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-use Daw\Models\Sesion;
+use Daw\models\Sesion;
 
 Sesion::start();
 Sesion::destroy();
