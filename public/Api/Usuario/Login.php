@@ -61,7 +61,7 @@ if (Validador::comprobarValidacion($cuerpo_respuesta)) {
     $usuario = new Usuario;
     $usuario->setNom_usuario("$nom_usuario");
     $contrasenya_hashed = password_hash("$contrasenya", PASSWORD_DEFAULT);
-    $usuario->setContrasenya("$contrasenya_hashed");
+    $usuario->setContrasenya("$contrasenya");
 
     // Una vez en el objeto los datos necesarios, ejecuto el método final y arrojo el resultado
     if ($usuario->login()){
