@@ -89,7 +89,7 @@ class Usuario extends Db
             if (mysqli_num_rows($resultado) > 0) {
                 $usuario = mysqli_fetch_assoc($resultado);
                 $check = password_verify($this->getContrasenya(), $usuario["contrasenya"]);
-                if (password_verify($this->getContrasenya, $usuario["contrasenya"])) {
+                if (password_verify($this->getContrasenya(), $usuario["contrasenya"])) {
                     Sesion::start();
                     Sesion::load($this->nom_usuario);
                     return true;
