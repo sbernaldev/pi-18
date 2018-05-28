@@ -12,7 +12,16 @@
     <!-- Bootstrap core CSS -->
     <?php require "../linkscss.php"; ?>
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script>
+          $(document).ready(function() {
+              $('#example').DataTable( {
+                  "order": [[ 3, "desc" ]]
+              } );
+          } );
+      </script>
   </head>
   <body>
     <?php require "../Menu.php"; ?>

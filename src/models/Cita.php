@@ -10,7 +10,7 @@ class Cita extends Db
     public $fecha_publicacion;
     public $frase;
     public $id_usuario;
-    public $id_categoria;
+    public $id_clase;
 
     function __construct()
     {
@@ -67,18 +67,62 @@ class Cita extends Db
      */
     public function crearCita()
     {
-        $array = [
+        $array1 = [
             "frase" => $this->frase,
-            "id_usuario" => $this->id_usuario
+            "id_usuario" => intval($this->id_usuario)
         ];
 
-        if (Table::insertarFila("frase", $array)) {
-            return true;
+        $id_frase = Table::insertarFila("frase", $array1);
+        
+        if ($id_frase) {
+
+            $this->id_frase = $id_frase;
+
+            $array2 = [
+                "id_clase" => intval($this->id_clase),
+                "id_frase" => intval($this->id_frase)
+            ];
+
+            if (Table::insertarFila("frasexclase", $array2)) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
     }
+    /**
+     * Obten con o sin límite una cntidad de citas con un determinado orden
+     */
+    public static function getCitas(array $params)
+    {
+        /*$params = [
+            "cantidad" => $cantidad,
+            "ordenar_por" => $ordenar_por
+        ];*/
+        
+        $resultado = mysqli_fetch_all(Table::selectAllFrom("frase"));
 
+        if (isset($params["cantidad"])) {
+            $resultado_limitado = array_slice($resultado,0,$params["cantidad"]);
+            
+            /* switch ($params["ordenar_por"]) {
+                case 'fecha':
+                    # descendiente de fecha
+                    break;
+                case 'likes':
+                    # descendiente de likes
+                    break;
+                default:
+                    # sin efecto
+                    break;
+            }*/
+            return $resultado_limitado;
+        }
+
+        return $resultado;
+    }
     /**
      * Get the value of id_frase
      */ 
@@ -159,22 +203,23 @@ class Cita extends Db
         return $this;
     }
 
+
     /**
-     * Get the value of id_categoria
+     * Get the value of id_clase
      */ 
-    public function getId_categoria()
+    public function getId_clase()
     {
-        return $this->id_categoria;
+        return $this->id_clase;
     }
 
     /**
-     * Set the value of id_categoria
+     * Set the value of id_clase
      *
      * @return  self
      */ 
-    public function setId_categoria($id_categoria)
+    public function setId_clase($id_clase)
     {
-        $this->id_categoria = $id_categoria;
+        $this->id_clase = $id_clase;
 
         return $this;
     }
