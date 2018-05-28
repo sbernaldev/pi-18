@@ -7,6 +7,4 @@ use Daw\Models\Sesion;
 Sesion::start();
 Sesion::destroy();
 
-header("Location: /");
-
 ?>
