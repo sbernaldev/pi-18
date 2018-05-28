@@ -31,8 +31,6 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                     <a class="dropdown-item" href="/perfil">Mi perfil</a>
-                    <a class="dropdown-item" href="#">Ajustes</a>
-                    <a class="dropdown-item" href="#">Favoritos</a>
                     <a class="dropdown-item" href="/administrador">Gestión usuarios</a>
                     <a class="dropdown-item" href="/logout">Cerrar sesión</a>
                 </div>
