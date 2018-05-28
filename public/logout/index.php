@@ -7,6 +7,6 @@ use Daw\models\Sesion;
 Sesion::start();
 Sesion::destroy();
 
-echo ("Sesión cerrada");
+header("Location: /");
 
 ?>
