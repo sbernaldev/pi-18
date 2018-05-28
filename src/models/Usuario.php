@@ -87,9 +87,15 @@ class Usuario extends Db
         $resultado = Table::obtenerFila("usuario","nom_usuario", "$nom_usuario");
         if (is_object($resultado) === true ) {
             if (mysqli_num_rows($resultado) > 0) {
-                Sesion::start();
-                Sesion::load($this->nom_usuario);
-                return true;
+                $usuario = mysqli_fetch_assoc($resultado);
+                $check = password_verify($this->getContrasenya(), $usuario["contrasenya"]);
+                if (password_verify($this->getContrasenya, $usuario["contrasenya"])) {
+                    Sesion::start();
+                    Sesion::load($this->nom_usuario);
+                    return true;
+                } else {
+                    return false;
+                }
             } else {
                 return false;
             }
