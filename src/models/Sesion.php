@@ -28,8 +28,7 @@ class Sesion
 
     public static function destroy()
     {
-        //session_unset();
-        $_SESSION = [];
+        session_unset();
         session_destroy();
     }
 
