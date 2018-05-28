@@ -7,4 +7,6 @@ use Daw\Models\Sesion;
 Sesion::start();
 Sesion::destroy();
 
+echo ("Sesión cerrada");
+
 ?>
