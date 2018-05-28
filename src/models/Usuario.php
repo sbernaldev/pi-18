@@ -85,10 +85,14 @@ class Usuario extends Db
 
         $Db = new Db;
         $resultado = Table::obtenerFila("usuario","nom_usuario", "$nom_usuario");
-        if (mysqli_num_rows($resultado) > 0) {
-            Sesion::start();
-            Sesion::load($this->nom_usuario);
-            return true;
+        if (is_object($resultado) === true ) {
+            if (mysqli_num_rows($resultado) > 0) {
+                Sesion::start();
+                Sesion::load($this->nom_usuario);
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }

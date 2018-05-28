@@ -55,7 +55,7 @@ function capturaPeticion() {
         if (http_request.status == 200) {
 
             // Convertimos el JSON a un array
-            var responseJSON=JSON.parse(http_request.responseText)
+            var responseJSON = JSON.parse(http_request.responseText)
             console.log(responseJSON)
 
             // Manejamos cada tipo de respuesta. Un if por cada validación
@@ -84,8 +84,11 @@ function capturaPeticion() {
                         break
                 }
             }
-            if (responseJSON["logeado"] == true ){
+
+            if (responseJSON["logeado"] === true ){
                 window.location.replace("/perfil");
+            } else {
+                alert("No se ha podido iniciar sesión, revisa los datos insertados")
             }
         } else {
             alert("Ha ocurrido un error con la conexión.")
