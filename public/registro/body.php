@@ -71,7 +71,7 @@
 					<a href="login.php" target="_self" type="button" class="btn btn-primary btn-lg btn-block login-button">Login</a>
 				</div>
 				<div class="form-group">
-					<a href="index.php" target="_self" type="button" class="btn btn-primary btn-lg btn-block login-button">Entra como invitado!</a>
+					<a href="../index.php" target="_self" type="button" class="btn btn-primary btn-lg btn-block login-button">Entra como invitado!</a>
 				</div>
 			</form>
 		</div>
