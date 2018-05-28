@@ -72,13 +72,13 @@ if (Validador::comprobarValidacion($cuerpo_respuesta)) {
 
     // Una vez en el objeto los datos necesarios, ejecuto el método final y arrojo el resultado
     if ($cita->crearCita()) {
-        $cuerpo_respuesta["registrado"] = true;
+        $cuerpo_respuesta["creada"] = true;
     } else {
-        $cuerpo_respuesta["registrado"] = false;
+        $cuerpo_respuesta["creada"] = false;
     }
 } else {
     // Si no ha pasado la validación, digo que no se ha completado
-    $cuerpo_respuesta["registrado"] = false;
+    $cuerpo_respuesta["creada"] = false;
 }
 
 // Mostramos por pantalla la respuesta de la petición en JSON
