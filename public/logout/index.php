@@ -7,4 +7,6 @@ use Daw\Models\Sesion;
 Sesion::start();
 Sesion::destroy();
 
-header("Location: ../index.php");
+header("Location: /");
+
+?>
