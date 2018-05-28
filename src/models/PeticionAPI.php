@@ -17,7 +17,7 @@ class PeticionAPI
 
         // Configuro la petición a la API
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "http://localhost/Api/$categoria_endpoint/$endpoint.php",
+            CURLOPT_URL => "https://localhost/Api/$categoria_endpoint/$endpoint.php",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
