@@ -40,6 +40,7 @@ Sesion::start();
                     </div>
                 </div>
                 <div class="col-sm">
+                    <h1> Mis Favoritos</h1>
                     <table class="table table-hover">
                         <thead>
                         <tr>
@@ -50,19 +51,19 @@ Sesion::start();
                         </thead>
                         <tbody>
                         <tr>
-                            <th scope="row">pepe</th>
-                            <td>mi casa, tu casa</td>
-                            <td>fecha</td>
+                            <th scope="row">Marianico</th>
+                            <td>It’s very difficult todo esto.</td>
+                            <td>2018-05-18</td>
                         </tr>
                         <tr>
-                            <th scope="row">juan</th>
-                            <td>hola pepsicola</td>
-                            <td>fecha</td>
+                            <th scope="row">Casanova</th>
+                            <td>No hay nada que un hombre no sea capaz de hacer cuando una mujer le mira.</td>
+                            <td>2018-05-16</td>
                         </tr>
                         <tr>
-                            <th scope="row">pablo</th>
-                            <td>Mi coche es azul</td>
-                            <td>Fecha</td>
+                            <th scope="row">Marilyn</th>
+                            <td>Vivir sola es como estar en una fiesta donde nadie te hace caso.</td>
+                            <td>2018-05-14</td>
                         </tr>
                         </tbody>
                     </table>
