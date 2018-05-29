@@ -70,7 +70,7 @@
 				<div class="form-group">
 					<a href="login.php" target="_self" type="button" class="btn btn-primary btn-lg btn-block login-button">Login</a>
 				</div>
-				
+
 			</form>
 		</div>
 </div>
