@@ -1,6 +1,7 @@
 <?php
 
 namespace Daw\models;
+use http;
 
 class PeticionAPI
 {
@@ -14,10 +15,13 @@ class PeticionAPI
     public function requestGet($categoria_endpoint, $endpoint)
     {
         $curl = curl_init();
-
+        $server_name = $_SERVER['SERVER_NAME'];
+        $server_port = ($_SERVER['SERVER_PORT'] != 80 && $_SERVER['SERVER_PORT'] != 443) ? ":" . $_SERVER['SERVER_PORT'] : "";
+        $server_protocol = ($_SERVER['SERVER_PORT'] == 443 || isset($_SERVER['HTTPS'])) ? "https://" : "http://";
+        $server_address = $server_protocol . $server_name . $server_port;
         // Configuro la petición a la API
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://localhost/Api/$categoria_endpoint/$endpoint.php",
+            CURLOPT_URL => "$server_address/Api/$categoria_endpoint/$endpoint.php",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,

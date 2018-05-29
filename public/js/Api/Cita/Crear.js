@@ -32,7 +32,7 @@ function peticion(){
 
     // Inicio la peticion de escucha
     http_request.onreadystatechange = capturaPeticion;
-    http_request.open('POST', "http://192.168.99.100:32917/Api/Cita/Crear.php", false);
+    http_request.open('POST', "/Api/Cita/Crear.php", false);
 
     // Construyo el JSON de la petición
     http_request.setRequestHeader("Content-type", "application/json");
